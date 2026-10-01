@@ -45,6 +45,24 @@ h1 {
     font-size: 1.5rem;
 }
 
+#profiil_div {
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+#profiili_pilt_div {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: #000;
+    background-color: greenyellow;
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+
 #admin_vaade_peamine_vaade_nupud_umbris {
     display: grid;
     grid-template-columns: auto auto;
@@ -56,7 +74,7 @@ h1 {
 }
 
 .admin_vaate_peamised_nupud {
-    margin: 20px 0px 0px 0px;
+    padding-bottom: 20px;
 }
 
 .admin_vaate_peamised_nupud>button {
