@@ -76,12 +76,20 @@
 #kursuse_progress_bar {
     height: 10px;
     width: 1200px;
+    display: flex;
+    flex-direction: row;
 }
 
 #kursuse_tehtud_progress {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #565555;
   background-color: green;
 }
 
 #vaja_teha_progress {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #565555;
   background-color: red;
 }
