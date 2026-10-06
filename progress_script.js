@@ -15,22 +15,32 @@ function lisaHetkelKaivKursusEkraanile(kursus) {
     kloon.querySelector("#kursuse_nimi").innerHTML = kursus[0];
     kloon.querySelector("#kursuse_protsent_progress").innerHTML = " progress: " + kursus[1] + "%";
 
-    const terveProgressBarLaius = kloon.querySelector("#kursuse_progress_bar").offsetWidth; // see tagastab hetkel 0
-    console.log(terveProgressBarLaius);
-    const tehtudProgressiLaius = parseInt(terveProgressBarLaius, 10) * parseInt(kursus[1], 10) / 100;
-    const jaak = parseInt(terveProgressBarLaius, 10) - parseInt(tehtudProgressiLaius, 10); // tegemata progress
-    console.log(tehtudProgressiLaius, jaak);
-
-    kloon.querySelector("#kursuse_tehtud_progress").style.width = tehtudProgressiLaius + "px";
-    kloon.querySelector("#vaja_teha_progress").style.width = jaak + "px";
+    kloon.querySelector("#kursuse_tehtud_progress").style.width = kursus[1] + "%";
+    kloon.querySelector("#vaja_teha_progress").style.width = 100 - kursus[1] + "%";
 
     hetkeKursusedDiv.appendChild(kloon);
+}
+
+function lisaSaadavalKursusEkraanile(kursus) {
+    const kloon = progressTemplate.content.cloneNode(true);
+
+    kloon.querySelector("#kursuse_nimi").innerHTML = kursus;
+    kloon.querySelector("#kursuse_protsent_progress").innerHTML = " progress: 0%";
+
+    kloon.querySelector("#kursuse_tehtud_progress").style.width = "0%";
+    kloon.querySelector("#vaja_teha_progress").style.width = "100%";
+
+    saadavalKursusedDiv.appendChild(kloon);
 }
 
 function naitaKoikiKursuseid() {
     Object.values(hetkeKursused).forEach(element => {
         lisaHetkelKaivKursusEkraanile(element);
     });
+
+    saadavalKursused.forEach(element => {
+        lisaSaadavalKursusEkraanile(element);
+    })
 }
 
 naitaKoikiKursuseid();
