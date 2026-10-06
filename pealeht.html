@@ -4,10 +4,6 @@
     <title>Koolituste pealeht</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
     <!--faviconi viide: 
@@ -21,10 +17,16 @@
       <a href="/admin_vaade.html">Admin vaade</a>
     </nav>
     <main>
-      <div>Siia tuleb account detailid kinda</div>
-      <div id="koolitused">
-        Siia hakkavad tulema koolitused, mille saab alla lükata, hetkel võtan
-        dictist
+      <div id="profiil_div">
+        <div id="profiili_pilt_div">
+          <!--hiljem tuleks mingi img tagiga pilt-->
+        </div>
+        <p>nimi; õigused</p>
+      </div>
+      <div id="pealehe_sisu">
+        <div class="koolitus" id="tulevased_koolitused">Tulevased koolitused</div>
+        <div class="koolitus" id="labitud_koolitused">Läbitud koolitused</div>
+        <div class="koolitus" id="kohustuslikud_baaskoolitused">Kohustuslikud baaskoolitused</div>
       </div>
     </main>
     <footer><p>Info koolituse kohta kontakt õigused jne</p></footer>

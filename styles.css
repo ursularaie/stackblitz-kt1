@@ -44,3 +44,35 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+#profiil_div {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+
+#profiili_pilt_div {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  border-color: #000;
+  background-color: greenyellow;
+  width: 50px;
+  height: 50px;
+  margin-right: 25px;
+}
+
+#pealehe_sisu {
+  margin-left: 100px;
+}
+
+.koolitus {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  width: 1100px;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: rgb(228, 228, 228);
+}
